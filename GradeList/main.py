@@ -5,12 +5,10 @@ student_scores = {
   "Draco": 74,
   "Neville": 62,
 }
-# 🚨 Don't change the code above 👆
 
-#TODO-1: Create an empty dictionary called student_grades.
 student_grades = {}
 
-#TODO-2: Write your code below to add the grades to student_grades.👇
+
 for name in student_scores:
     student_grades[name] = ""
 
@@ -26,7 +24,7 @@ for name in student_scores:
 print(student_scores)
 print("")
   
-# 🚨 Don't change the code below 👇
+
 print(student_grades)
 
 
