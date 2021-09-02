@@ -10,7 +10,9 @@
 #     color_list.append((r, g, b)) 
 
 # print(color_list)
-
+#- -------------------------------------------------
+# This top colorgram.py code is commented out because I only ran it once
+# to be able to grab a color pallet sample from the image.jpg file.
 
 import turtle as t
 from turtle import Screen
