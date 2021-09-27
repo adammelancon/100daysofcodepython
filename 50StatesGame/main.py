@@ -30,7 +30,10 @@ y_cord = data.y.to_list()
 
 def write_state(state, x, y, si):
     ''' Writes the name of the state on top of the map location, 
-    then removes the state from the regular and lower cased lists, and removes the x/y coords from their list as well. This will give us a list at the end of only the states that weren't guessed that you need to work on.'''
+    then removes the state from the regular and lower cased lists, 
+    and removes the x/y coords from their list as well. 
+    This will give us a list at the end of only the states 
+    that weren't guessed that you need to work on.'''
     text = t.Turtle()
     text.hideturtle()
     text.penup()
@@ -40,7 +43,8 @@ def write_state(state, x, y, si):
     text.goto(x, y)
     text.write(f"{state}", align=ALIGNMENT, font=TEXTFONT)
     screen.title(f"U.S. States Game - Score: {len(guessed_states)}/50")
-    # these pops remove correct answers keep the indexes in sync between these lists, so that I have a final list of all_states with only the ones not guessed in it.
+    # these pops remove correct answers keep the indexes in sync between these lists, 
+    # so that I have a final list of all_states with only the ones not guessed in it.
     lower_states.pop(si)
     all_states.pop(si)
     y_cord.pop(si)
@@ -55,7 +59,8 @@ while len(guessed_states) < 50:
     answer_state = answer_state.lower().replace(" ", "")
     # print(answer_state)
 
-    # Check for exit cue.  If exiting, take all the states left in the all_states list that we haven't guessed, and output them to a csv file for study.
+    # Check for exit cue.  If exiting, take all the states left in the all_states list 
+    # that we haven't guessed, and output them to a csv file for study.
     if answer_state == "exit":
         statedf = pd.DataFrame(all_states)
         statedf.to_csv('unguessed.csv', header=False, index=False)
