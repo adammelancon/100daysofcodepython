@@ -41,7 +41,7 @@ def write_state(state, x, y, si):
 t.shape(image)
 
 
-while len(guessed_states) < 2:
+while len(guessed_states) < 50:
     
     answer_state = screen.textinput(title='Guess the state', prompt='Name another state! - or "exit"')
     answer_state = answer_state.lower().replace(" ", "")
